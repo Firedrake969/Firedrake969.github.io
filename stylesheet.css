@@ -29,7 +29,7 @@
     text-align:center;
 }
 #intro {
-    height:250px;
+    height:auto;
     width:500px;
     background-color:#24A8E0;
     border-radius:20px;
