@@ -21,8 +21,8 @@
     text-align:center;
 }
 #intro {
-    height:250px;
-    width:250px;
+    height:50vh;
+    width:75%;
     background-color:#24A8E0;
     border-radius:20px;
     margin:auto;
