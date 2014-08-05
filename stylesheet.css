@@ -1,7 +1,12 @@
 #back {
     background-color:#6CF8D7;
     height:100vh;
-    width:100%;
+    margin:0;
+    padding:0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 #top {
     height:100px;
