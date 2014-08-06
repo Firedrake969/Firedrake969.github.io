@@ -1,13 +1,14 @@
 body{
     margin: 0;
+    background-color:#6CF8D7;
 }
 
-#back {
+/*#back {
     background-color:#6CF8D7;
     width: 100%;
     top: 0;
     left: 0;
-}
+}*/
 #top {
     height:100px;
     width:500px;
