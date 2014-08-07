@@ -8,7 +8,7 @@ Most JavaScript by Firedrake969.  Some by turkey3.  Most CSS by turkey3, and som
 var ballDir = (Math.floor(Math.random() * (360) + 1)) * (Math.PI / 180);
 var player = $('#player');
 var cpu = $("#cpu");
-//var ball = $("#ball");
+var ball = $("#ball");
 var starting = true;
 var dist = 2;
 var playerSpeed = 3;
