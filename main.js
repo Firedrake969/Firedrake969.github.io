@@ -3,6 +3,7 @@ $(window).resize(function () {
         $('#menu').hide();
     } else if ($(window).width() >= 830) {
         $('#menu').show();
+        $('#menu').css("left", (($(window).width()/2) - 415) + 'px');
     }
 });
 
@@ -11,6 +12,7 @@ $(document).ready(function () {
         $('#menu').hide();
     } else if ($(window).width() >= 830) {
         $('#menu').show();
+        $('#menu').css("left", (($(window).width()/2) - 415) + 'px');
     }
 });
 
