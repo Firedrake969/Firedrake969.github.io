@@ -4,7 +4,6 @@ BROWSER PONG
 ===========================
 Most JavaScript by Firedrake969.  Some by turkey3.  Most CSS by turkey3, and some by Firedrake969.  Originally part of -FlamingGobble-, but now the code is turning into my own game.  Turkey3 made the AI motion.
 ***********************************************************************/
-
 var ballDir = (Math.floor(Math.random() * (360) + 1)) * (Math.PI / 180);
 var player = $('#player');
 var cpu = $("#cpu");
@@ -95,9 +94,17 @@ function detectGoal() {
 }
 
 function ballMove() {
-    ball.css("top", Math.round($('#ball').position().top - (dist * Math.sin(ballDir))) + 'px');
+    ball.css("top", Math.round(ball.position().top - (dist * Math.sin(ballDir))) + 'px');
     ball.css("left", Math.round(ball.position().left + (dist * Math.cos(ballDir))) + 'px');
 }
+
+/*
+function paddleBounce(condition) {
+    if (condition) {
+        ballDir = (Math.abs(180 - (ballDir * (180 / Math.PI)))) * (Math.PI / 180);
+    }
+}
+*/
 
 function paddleBounce() {
     if (ball.position().left < player.position().left + 70 && ball.position().left + 10 > player.position().left && ball.position().top > 350) {
@@ -107,6 +114,16 @@ function paddleBounce() {
         ballDir = ((180 + (ballDir * (180 / Math.PI)))) * (Math.PI/180);
     }
 }
+
+/*
+$(document).keydown(function (e) {
+    if (e.keyCode === 68 && player.position().left < 430) {
+        player.css("left", player.position().left + playerSpeed + 'px');
+    } else if (e.keyCode === 65 && player.position().left > 10) {
+        player.css("left", player.position().left - playerSpeed + 'px');
+    }
+});
+*/
 
 $(document).keydown(function (e) {
     if (e.keyCode === 68) {
