@@ -1,7 +1,4 @@
 var ballDir = (Math.floor(Math.random() * (360) + 1)) * (Math.PI / 180);
-var player = $('#player');
-var cpu = $("#cpu");
-var ball = $("#ball");
 var starting = true;
 var dist = 2;
 var playerSpeed = 3;
