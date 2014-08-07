@@ -1,5 +1,4 @@
 body {
-    /*margin: 0;*/
     background-color:#6CF8D7;
 }
 a:link {
@@ -36,7 +35,7 @@ a:hover {
     padding:10px;
     top:50%;
 }
-#intro {
+#about-me {
     height:auto;
     width:500px;
     background-color:#24A8E0;
