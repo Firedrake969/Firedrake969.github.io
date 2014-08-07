@@ -1,0 +1,86 @@
+#body {
+    width:520px;
+    height:400px;
+    margin-left:0px;
+    margin-top:0px;
+    border: 2px solid #808080;
+    position:relative;
+    border-radius:10px;
+}
+#cpu {
+    position:absolute;
+    border: 1px solid #808080;
+    background-color: #B2B2B2;
+    width:80px;
+    height:15px;
+    left:220px;
+    /* sets it to the center*/
+    top:10px;
+    display:block;
+    float:top;
+}
+#ball {
+    position:absolute;
+    height:20px;
+    width:20px;
+    border-radius:10px;
+    moz-border-radius:7px;
+    webkit-border-radius:7px;
+    border: 1px solid #333333;
+    background-color:#333333;
+    top:190px;
+    left:250px;
+}
+#player {
+    position:absolute;
+    border: 1px solid #808080;
+    background-color: #B2B2B2;
+    width:80px;
+    height:15px;
+    left:220px;
+    top:375px;
+}
+#infobox {
+    width:520px;
+    height:100px;
+    border:2px solid #808080;
+    margin-left:0px;
+    margin-top:5px;
+    position:relative;
+    border-radius:10px;
+    text-align:center;
+    font-family:Helvetica;
+}
+#footer {
+    width:520px;
+    height:75px;
+    border:2px solid #808080;
+    margin-left:0px;
+    margin-top:5px;
+    position:relative;
+    border-radius:10px;
+    text-align:center;
+    font-family:Helvetica;
+}
+#playerScore {
+    border:2px solid #808080;
+    position:absolute;
+    width:50px;
+    height:25px;
+    font-family:Helvetica;
+    border-radius:10px;
+    text-align:center;
+    top:5px;
+    left:5px;
+}
+#cpuScore {
+    border:2px solid #808080;
+    position:absolute;
+    width:50px;
+    height:25px;
+    border-radius:10px;
+    top:38px;
+    font-family:Helvetica;
+    text-align:center;
+    left:5px;
+}
