@@ -1,9 +1,12 @@
+body {
+    background-color:#6CF8D7;
+}
 #body {
     width:520px;
     height:400px;
-    margin-left:0px;
-    margin-top:0px;
+    margin:auto;
     border: 2px solid #808080;
+    background-color:#FFFFFF;
     position:relative;
     border-radius:10px;
 }
@@ -50,6 +53,7 @@
     border-radius:10px;
     text-align:center;
     font-family:Helvetica;
+    background-color:#FFFFFF;
 }
 #footer {
     width:520px;
@@ -61,6 +65,7 @@
     border-radius:10px;
     text-align:center;
     font-family:Helvetica;
+    background-color:#FFFFFF;
 }
 #playerScore {
     border:2px solid #808080;
