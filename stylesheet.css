@@ -11,6 +11,10 @@ body {
 .mlink:hover {
     font-weight:bold;
 }
+.link:link {
+    color:#e06024;
+    text-decoration:none;
+}
 .textbox {
     height:auto;
     width:500px;
