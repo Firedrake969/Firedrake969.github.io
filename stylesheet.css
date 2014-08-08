@@ -8,7 +8,7 @@ body {
 .mlink:visited {
     color:#46bb69;
 }
-.mlink, .link:hover {
+.mlink:hover, .link:hover {
     font-weight:bold;
 }
 .link:link {
