@@ -10,6 +10,7 @@ a:visited {
 }
 a:hover {
     color:#79d495;
+    font-weight:bold;
 }
 .textbox {
     height:auto;
