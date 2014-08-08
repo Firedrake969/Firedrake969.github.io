@@ -1,14 +1,14 @@
 body {
     background-color:#75D8FF;
 }
-a:link {
+.mlink:link {
     color:#58ED85;
     text-decoration:none;
 }
-a:visited {
+.mlink:visited {
     color:#46bb69;
 }
-a:hover {
+.mlink:hover {
     font-weight:bold;
 }
 .textbox {
