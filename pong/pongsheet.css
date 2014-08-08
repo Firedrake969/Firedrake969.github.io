@@ -2,13 +2,14 @@ body {
     background-color:#75D8FF;
 }
 a:link {
-    color:#00FF15;
+    color:#58ED85;
     text-decoration:none;
 }
 a:visited {
-    color:#00D612;
+    color:#46bb69;
 }
 a:hover {
+    color:#79d495;
     font-weight:bold;
 }
 #menu {
