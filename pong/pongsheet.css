@@ -54,6 +54,7 @@ body {
     text-align:center;
     font-family:Helvetica;
     background-color:#FFFFFF;
+    margin:auto;
 }
 #footer {
     width:520px;
@@ -66,6 +67,7 @@ body {
     text-align:center;
     font-family:Helvetica;
     background-color:#FFFFFF;
+    margin:auto;
 }
 #playerScore {
     border:2px solid #808080;
