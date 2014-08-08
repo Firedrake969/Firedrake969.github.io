@@ -8,12 +8,15 @@ body {
 .mlink:visited {
     color:#46bb69;
 }
-.mlink:hover {
+.mlink, .link:hover {
     font-weight:bold;
 }
 .link:link {
     color:#e06024;
     text-decoration:none;
+}
+.link:visited {
+    color:#CF5821;
 }
 .textbox {
     height:auto;
