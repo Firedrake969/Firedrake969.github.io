@@ -49,7 +49,7 @@ a:hover {
     padding:10px;
     top:50%;
 }
-p {
+.text {
     font-size:15px;
     text-align:justify;
 }
