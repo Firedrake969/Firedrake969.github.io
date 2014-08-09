@@ -16,9 +16,9 @@ function theme(c1, c2, c3, c4, c5, c6, c7, c8) {
     window.scrollTo(0, 0);
 }
 
-$('#blue').click(function () {
+/*$('#blue').click(function () {
     theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
-});
+});*/
 
 $(window).resize(function () {
     if ($(window).width() < 830) {
@@ -41,3 +41,7 @@ $(document).ready(function () {
 });
 
 //825:  Minimum width before hiding menu
+
+$('#blue').click(function () {
+    theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
+});
