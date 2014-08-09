@@ -15,6 +15,7 @@ function theme(c1, c2, c3, c4, c5, c6, c7, c8) {
     $('#menu').css("background-color", c8);
     window.scrollTo(0, 0);
 }
+
 $('#blue').click(function () {
     theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
     //document.cookie = 'color=blue; expires=' + CookieDate.toGMTString( ) + ';';
@@ -31,15 +32,6 @@ $(window).resize(function () {
 });
 
 $(document).ready(function () {
-    /*if (document.cookie != "color=blue" && document.cookie != 'color=gray') {
-        var cDate = new Date;
-        CookieDate.setFullYear(CookieDate.getFullYear() +10);
-        document.cookie = 'color=blue; expires=' + CookieDate.toGMTString( ) + ';';
-    } else if (document.cookie = "color=blue") {
-        theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
-    } else if (document.cookie = "color=gray") {
-        
-    }*/
     if ($(window).width() < 830) {
         $('#menu').hide();
     } else if ($(window).width() >= 830) {
