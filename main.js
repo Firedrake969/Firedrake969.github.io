@@ -16,11 +16,6 @@ function theme(c1, c2, c3, c4, c5, c6, c7, c8) {
     window.scrollTo(0, 0);
 }
 
-$('#blue').click(function () {
-    alert(1);
-    theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
-    //document.cookie = 'color=blue; expires=' + CookieDate.toGMTString( ) + ';';
-});
 
 $(window).resize(function () {
     if ($(window).width() < 830) {
@@ -40,6 +35,10 @@ $(document).ready(function () {
         $('#menu').css("left", (($(window).width() / 2) - 415) + 'px');
     }
     $('#menu').css('margin-top', (0 - ($('#menu').height() / 2)) + 'px');
+});
+
+$('#blue').click(function () {
+    theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
 });
 
 //825:  Minimum width before hiding menu
