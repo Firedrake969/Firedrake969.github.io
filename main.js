@@ -1,4 +1,4 @@
-var blue = ["#75D8FF", "#58ED85", "#46bb69", "#e06024", "#CF5821", "#24A8E0", "#7729FF", "#8929FF"]
+var blue = ["#75D8FF", "#58ED85", "#46bb69", "#e06024", "#CF5821", "#24A8E0", "#7729FF", "#8929FF"];
 /*
 order:
 body, .mlink:link, .mlink:visited, .link:link, .link:visited, .textbox, #top, #menu
@@ -16,6 +16,9 @@ function theme(c1, c2, c3, c4, c5, c6, c7, c8) {
     window.scrollTo(0, 0);
 }
 
+$('#blue').click(function () {
+    theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
+});
 
 $(window).resize(function () {
     if ($(window).width() < 830) {
@@ -35,10 +38,6 @@ $(document).ready(function () {
         $('#menu').css("left", (($(window).width() / 2) - 415) + 'px');
     }
     $('#menu').css('margin-top', (0 - ($('#menu').height() / 2)) + 'px');
-});
-
-$('#blue').click(function () {
-    theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
 });
 
 //825:  Minimum width before hiding menu
