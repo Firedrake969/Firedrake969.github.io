@@ -31,7 +31,7 @@ $(window).resize(function () {
 });
 
 $(document).ready(function () {
-    if (document.cookie = "") {
+    if (document.cookie != "color=blue" && document.cookie != 'color=gray') {
         var cDate = new Date;
         CookieDate.setFullYear(CookieDate.getFullYear() +10);
         document.cookie = 'color=blue; expires=' + CookieDate.toGMTString( ) + ';';
