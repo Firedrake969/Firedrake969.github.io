@@ -17,6 +17,7 @@ function theme(c1, c2, c3, c4, c5, c6, c7, c8) {
 }
 
 $('#blue').click(function () {
+    alert(1);
     theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
     //document.cookie = 'color=blue; expires=' + CookieDate.toGMTString( ) + ';';
 });
