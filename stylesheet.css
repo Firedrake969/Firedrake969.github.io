@@ -1,5 +1,5 @@
 body {
-    background-color:#75D8FF;
+    background-color:#A1A1A1;
 }
 .mlink:link {
     color:#58ED85;
@@ -31,6 +31,23 @@ body {
     text-align:center;
     padding:10px;
 }
+
+.theme {
+    height:50px;
+    width:50px;
+    border-radius:10px;
+}
+#blue {
+    background-color:#75D8FF;
+}
+#gray {
+    background-color:#A1A1A1;
+}
+table {
+    margin:auto;
+    border-spacing:10px;
+}
+
 #top {
     height:100px;
     width:500px;
