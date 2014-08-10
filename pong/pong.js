@@ -89,13 +89,6 @@ function ballMove() {
     $('#ball').css("left", Math.round($('#ball').position().left + (dist * Math.cos(ballDir))) + 'px');
 }
 
-/*
-function paddleBounce(condition) {
-    if (condition) {
-        ballDir = (Math.abs(180 - (ballDir * (180 / Math.PI)))) * (Math.PI / 180);
-    }
-}
-*/
 
 function paddleBounce() {
     if ($('#ball').position().left < $('#player').position().left + 70 && $('#ball').position().left + 10 > $('#player').position().left && $('#ball').position().top > 350) {
@@ -105,16 +98,6 @@ function paddleBounce() {
         ballDir = ((180 + (ballDir * (180 / Math.PI)))) * (Math.PI/180);
     }
 }
-
-/*
-$(document).keydown(function (e) {
-    if (e.keyCode === 68 && $('#player').position().left < 430) {
-        $('#player').css("left", $('#player').position().left + playerSpeed + 'px');
-    } else if (e.keyCode === 65 && $('#player').position().left > 10) {
-        $('#player').css("left", $('#player').position().left - playerSpeed + 'px');
-    }
-});
-*/
 
 $(document).keydown(function (e) {
     if (e.keyCode === 68) {
@@ -151,71 +134,3 @@ $(document).mouseenter(function () {
         starting = false;
     });
 }); 
-var blue = ["#75D8FF", "#58ED85", "#46bb69", "#e06024", "#CF5821", "#24A8E0", "#7729FF", "#8929FF"];
-var gray = ["#F5F5F5", "#FFFFFF", "#CCCCCC", "#525252", "#808080", "#BFBFBF", "#7E7D82", "#8F8E94"];
-/*
-order:
-body, .mlink:link, .mlink:visited, .link:link, .link:visited, .textbox, #top, #menu
-body, .textbox, #top, and #menu are background-color; the rest are color
-*/
-function theme(c1, c2, c3, c4, c5, c6, c7, c8) {
-    $('body').css("background-color", c1);
-    $('.mlink:link').css("color", c2);
-    $('.mlink:visited').css("color", c3);
-    $('.link:link').css("color", c4);
-    $('.link:visited').css("color", c5);
-    $('.textbox').css("background-color", c6);
-    $('#top').css("background-color", c7);
-    $('#menu').css("background-color", c8);
-    window.scrollTo(0, 0);
-}
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
-    }
-    return "";
-}
-$(window).resize(function () {
-    if ($(window).width() < 830) {
-        $('#menu').hide();
-    } else if ($(window).width() >= 830) {
-        $('#menu').show();
-        $('#menu').css("left", (($(window).width() / 2) - 415) + 'px');
-    }
-    $('#menu').css('margin-top', (0 - ($('#menu').height() / 2)) + 'px');
-});
-
-$(document).ready(function () {
-    if (getCookie("color") == "") {
-        var CookieDate = new Date;
-        CookieDate.setFullYear(CookieDate.getFullYear() +10);
-        document.cookie = 'color=blue; expires=' + CookieDate.toGMTString() + ';';
-    } else if (getCookie("color") == "blue") {
-        theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
-    } else if (getCookie("color") == "gray") {
-        theme(gray[0], gray[1], gray[2], gray[3], gray[4], gray[5], gray[6], gray[7]);
-    }
-    if ($(window).width() < 830) {
-        $('#menu').hide();
-    } else if ($(window).width() >= 830) {
-        $('#menu').show();
-        $('#menu').css("left", (($(window).width() / 2) - 415) + 'px');
-    }
-    $('#menu').css('margin-top', (0 - ($('#menu').height() / 2)) + 'px');
-    $('#blue').click(function () {
-        theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
-        var CookieDate = new Date;
-        CookieDate.setFullYear(CookieDate.getFullYear() +10);
-        document.cookie = 'color=blue; expires=' + CookieDate.toGMTString() + ';';
-    });
-    $('#gray').click(function () {
-        theme(gray[0], gray[1], gray[2], gray[3], gray[4], gray[5], gray[6], gray[7]);
-        var CookieDate = new Date;
-        CookieDate.setFullYear(CookieDate.getFullYear() +10);
-        document.cookie = 'color=gray; expires=' + CookieDate.toGMTString() + ';';
-    });
-});
