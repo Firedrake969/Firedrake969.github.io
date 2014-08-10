@@ -17,23 +17,29 @@ function theme(c1, c2, c3, c4, c5, c6, c7, c8) {
     window.scrollTo(0, 0);
 }
 
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
     }
-    return "";
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
 }
 
-function setCookie(c_name, value, exdays)  
-{  
-    var exdate = new Date();  
-    exdate.setDate( exdate.getDate() + exdays );  
-    var c_value = escape( value ) + ( ( exdays == null ) ? "" : "; expires=" + exdate.toUTCString() );  
-    document.cookie = c_name + "=" + c_value + "; path=/";  
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    createCookie(name,"",-1);
 }
 
 
@@ -49,10 +55,10 @@ $(window).resize(function () {
 
 $(document).ready(function () {
     if (getCookie("color") == "") {
-        setCookie("color", "blue", 3650);
-    } else if (getCookie("color") == "blue") {
+        createCookie("color", "blue", 3650);
+    } else if (readCookie("color") == "blue") {
         theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
-    } else if (getCookie("color") == "gray") {
+    } else if (readCookie("color") == "gray") {
         theme(gray[0], gray[1], gray[2], gray[3], gray[4], gray[5], gray[6], gray[7]);
     }
     if ($(window).width() < 830) {
@@ -64,11 +70,13 @@ $(document).ready(function () {
     $('#menu').css('margin-top', (0 - ($('#menu').height() / 2)) + 'px');
     $('#blue').click(function () {
         theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
-        setCookie("color", "blue", 3650);
+        eraseCookie("color");
+        createCookie("color", "blue", 3650);
     });
     $('#gray').click(function () {
         theme(gray[0], gray[1], gray[2], gray[3], gray[4], gray[5], gray[6], gray[7]);
-        setCookie("color", "blue", 3650);
+        eraseCookie("color");
+        createCookie("color", "blue", 3650);
     });
 });
 
