@@ -17,6 +17,17 @@ function theme(c1, c2, c3, c4, c5, c6, c7, c8) {
     window.scrollTo(0, 0);
 }
 
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
 
 $(window).resize(function () {
     if ($(window).width() < 830) {
@@ -29,6 +40,15 @@ $(window).resize(function () {
 });
 
 $(document).ready(function () {
+    if (getCookie("color") == "") {
+        var CookieDate = new Date;
+        CookieDate.setFullYear(CookieDate.getFullYear() +10);
+        document.cookie = 'color=blue; expires=' + CookieDate.toGMTString() + ';';
+    } else if (getCookie("color") == "blue") {
+        theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
+    } else if (getCookie("color") == "gray") {
+        theme(gray[0], gray[1], gray[2], gray[3], gray[4], gray[5], gray[6], gray[7]);
+    }
     if ($(window).width() < 830) {
         $('#menu').hide();
     } else if ($(window).width() >= 830) {
@@ -38,9 +58,15 @@ $(document).ready(function () {
     $('#menu').css('margin-top', (0 - ($('#menu').height() / 2)) + 'px');
     $('#blue').click(function () {
         theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
+        var CookieDate = new Date;
+        CookieDate.setFullYear(CookieDate.getFullYear() +10);
+        document.cookie = 'color=blue; expires=' + CookieDate.toGMTString() + ';';
     });
     $('#gray').click(function () {
         theme(gray[0], gray[1], gray[2], gray[3], gray[4], gray[5], gray[6], gray[7]);
+        var CookieDate = new Date;
+        CookieDate.setFullYear(CookieDate.getFullYear() +10);
+        document.cookie = 'color=gray; expires=' + CookieDate.toGMTString() + ';';
     });
 });
 
