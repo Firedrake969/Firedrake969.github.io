@@ -208,8 +208,14 @@ $(document).ready(function () {
     $('#menu').css('margin-top', (0 - ($('#menu').height() / 2)) + 'px');
     $('#blue').click(function () {
         theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
+        var CookieDate = new Date;
+        CookieDate.setFullYear(CookieDate.getFullYear() +10);
+        document.cookie = 'color=blue; expires=' + CookieDate.toGMTString() + ';';
     });
     $('#gray').click(function () {
         theme(gray[0], gray[1], gray[2], gray[3], gray[4], gray[5], gray[6], gray[7]);
+        var CookieDate = new Date;
+        CookieDate.setFullYear(CookieDate.getFullYear() +10);
+        document.cookie = 'color=gray; expires=' + CookieDate.toGMTString() + ';';
     });
 });
