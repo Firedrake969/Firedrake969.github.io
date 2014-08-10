@@ -1,4 +1,5 @@
 var blue = ["#75D8FF", "#58ED85", "#46bb69", "#e06024", "#CF5821", "#24A8E0", "#7729FF", "#8929FF"];
+var gray = ["#F5F5F5", "#FFFFFF", "#CCCCCC", "#525252", "#808080", "#BFBFBF", "#7E7D82", "#8F8E94"];
 /*
 order:
 body, .mlink:link, .mlink:visited, .link:link, .link:visited, .textbox, #top, #menu
@@ -38,4 +39,9 @@ $(document).ready(function () {
     $('#blue').click(function () {
         theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
     });
+    $('#gray').click(function () {
+        theme(gray[0], gray[1], gray[2], gray[3], gray[4], gray[5], gray[6], gray[7]);
+    });
 });
+
+//825:  Minimum width before hiding menu
