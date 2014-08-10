@@ -38,4 +38,3 @@ $(document).ready(function () {
     }
     $('#menu').css('margin-top', (0 - ($('#menu').height() / 2)) + 'px');
 });
-});
