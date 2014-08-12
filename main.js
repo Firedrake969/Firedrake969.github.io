@@ -35,7 +35,7 @@ $(window).resize(function () {
 });
 
 $(document).ready(function () {
-    if (document.cookie = "") {
+    if (document.cookie == "") {
         setCookie("color", "blue");
     } else if (document.cookie.split(";")[0] == "color=blue") {
         setCookie("color", "blue");
