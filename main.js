@@ -38,9 +38,9 @@ $(document).ready(function () {
     if (document.cookie == "") {
         setCookie("color", "blue", 3650);
     } else if (document.cookie.split(";")[0] == "color=blue") {
-        setCookie("color", "blue", 3650);
+        theme(blue[0], blue[1], blue[2], blue[3], blue[4], blue[5], blue[6], blue[7]);
     } else if (document.cookie.split(";")[0] == "color=gray") {
-        setCookie("color", "gray", 3650);
+        theme(gray[0], gray[1], gray[2], gray[3], gray[4], gray[5], gray[6], gray[7]);
     }
     if ($(window).width() < 830) {
         $('#menu').hide();
