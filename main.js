@@ -17,6 +17,13 @@ function theme(c1, c2, c3, c4, c5, c6, c7, c8) {
     window.scrollTo(0, 0);
 }
 
+function setCookie(c_name, value)  {  
+    var exdate = new Date();  
+    exdate.setDate( exdate.getDate() + 3650 );  
+    var c_value = escape( value ) + ( ( exdays == null ) ? "" : "; expires=" + exdate.toUTCString() );  
+    document.cookie = c_name + "=" + c_value + "; path=/";
+}
+
 $(window).resize(function () {
     if ($(window).width() < 830) {
         $('#menu').hide();
@@ -28,6 +35,13 @@ $(window).resize(function () {
 });
 
 $(document).ready(function () {
+    if (document.cookie = "") {
+        setCookie("color", "blue");
+    } else if (document.cookie.split(";")[0] == "color=blue") {
+        setCookie("color", "blue");
+    } else if (document.cookie.split(";")[0] == "color=gray") {
+        setCookie("color", "gray");
+    }
     if ($(window).width() < 830) {
         $('#menu').hide();
     } else if ($(window).width() >= 830) {
