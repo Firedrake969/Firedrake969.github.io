@@ -57,7 +57,7 @@ $(document).ready(function () {
     $('#gray').click(function () {
         theme(gray[0], gray[1], gray[2], gray[3], gray[4], gray[5], gray[6], gray[7]);
         setCookie("color","",-1);
-        setCookie("color","blue",36500);
+        setCookie("color","gray",36500);
     });
 });
 
