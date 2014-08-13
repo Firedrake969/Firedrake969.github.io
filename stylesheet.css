@@ -6,7 +6,7 @@ body {
     text-decoration:none;
 }
 .mlink:visited {
-    color:#46bb69;
+    color:#58ED85;
 }
 .mlink:hover {
     font-weight:bold;
@@ -16,7 +16,7 @@ body {
     text-decoration:none;
 }
 .link:visited {
-    color:#CF5821;
+    color:#e06024;
 }
 .textbox {
     height:auto;
