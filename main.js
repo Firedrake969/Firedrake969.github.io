@@ -1,5 +1,5 @@
-var blue = ["#75D8FF", "#58ED85", "#46bb69", "#e06024", "#CF5821", "#24A8E0", "#7729FF", "#8929FF"];
-var gray = ["#F5F5F5", "#FFFFFF", "#CCCCCC", "#525252", "#808080", "#BFBFBF", "#7E7D82", "#8F8E94"];
+var blue = ["#75D8FF", "#58ED85", "#58ED85", "#e06024", "#e06024", "#24A8E0", "#7729FF", "#8929FF"];
+var gray = ["#F5F5F5", "#FFFFFF", "#FFFFFF", "#525252", "#525252", "#BFBFBF", "#7E7D82", "#8F8E94"];
 /*
 order:
 body, .mlink:link, .mlink:visited, .link:link, .link:visited, .textbox, #top, #menu
