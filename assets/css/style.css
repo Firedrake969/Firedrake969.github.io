@@ -1,6 +1,5 @@
 body {
 	margin:0px;
-	font-family:
 }
 
 a {
@@ -9,4 +8,6 @@ a {
 
 #body {
 	padding:3px;
+	margin:auto;
+	width:65%;
 }
