@@ -7,7 +7,24 @@ a {
 }
 
 #body {
-	padding:3px;
+	padding:25px;
 	margin:auto;
 	width:65%;
+}
+
+.header {
+	font-family:Roboto, sans-serif;
+	width:100%;
+	font-size:30px;
+	margin-top:25px;
+}
+
+.header:first-of-type {
+	margin-top:100px;
+}
+
+.content {
+	text-indent:20px;
+	font-family:Open Sans, sans-serif;
+	padding:5px;
 }
