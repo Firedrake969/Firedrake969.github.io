@@ -4,6 +4,11 @@ body {
 
 a {
 	text-decoration:none;
+	color:#636363;
+}
+
+a:visited {
+	color:#5C5C5C;
 }
 
 #body {
