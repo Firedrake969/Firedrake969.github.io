@@ -4,8 +4,12 @@ title: About
 permalink: /about/
 ---
 
-My space on the web
+I should fill this in.
 
-### About me
+## Languages
+- JavaScript
+- Python
+- Go
 
-I'll fill this in someday.
+## Projects
+See [here](https://firedrake969.github.io/projects)
